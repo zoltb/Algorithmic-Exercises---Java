@@ -5,11 +5,11 @@ public class Fibonacci {
   private static BigInteger calc_fib(int n) {
     BigInteger[] fibArray = new BigInteger[n+1];
 
-    BigInteger result = new BigInteger("0");
+    BigInteger result;
 
     if (n >= 2) {
-      fibArray[0] = 0;
-      fibArray[1] = 1;
+      fibArray[0] = BigInteger.valueOf(0);
+      fibArray[1] = BigInteger.valueOf(1);
 
       for (int i = 2; i <= n; i++) {
 
@@ -17,7 +17,7 @@ public class Fibonacci {
       }
       result = fibArray[n];
     } else {
-      result = n;
+      result = BigInteger.valueOf(n);
     }
 
     return result;
